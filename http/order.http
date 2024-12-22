@@ -1,0 +1,41 @@
+### 주문 추가
+POST localhost:8010/orders
+Content-Type: application/json
+
+{
+  "userId": "user",
+  "productId": 1,
+  "productQuantity": 1,
+  "payAmount": 1000
+}
+
+### 주문 조회
+GET localhost:8010/orders/8f6aa220-ab2e-4946-be48-2e06cc15e53d
+
+### 주문 추가(수량 실패)
+POST localhost:8010/orders
+Content-Type: application/json
+
+{
+  "userId": "user",
+  "productId": 1,
+  "productQuantity": 2,
+  "payAmount": 1000
+}
+
+### 주문 조회(수량 실패)
+GET localhost:8010/orders/3aeb751c-49e1-4b00-8db0-157f60e58823
+
+### 주문 추가(금액 실패)
+POST localhost:8010/orders
+Content-Type: application/json
+
+{
+  "userId": "user",
+  "productId": 1,
+  "productQuantity": 1,
+  "payAmount": 10000
+}
+
+### 주문 조회(금액 실패)
+GET localhost:8010/orders/c5593043-94da-4bde-ad56-b02f48f49529
